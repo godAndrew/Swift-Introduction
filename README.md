@@ -4,6 +4,9 @@ Python is the only language i am used to, let's learn Switft together, you must 
 If you don't have a Macbook yet you can use IBM Swift Sandbox just like me, or any other online platform as you wish!
 Feel free to contact me for any reason specially to bring additional pieces of information for this guide! Still learning how to use Git Hub!
 
+I will bring some projects for we to learn and practice 
+And these Reads are going to be my personal comments about our "lessons"
+
 Let's begin with some information about the Swift Language
 Swift is an open source language developed by Apple in order to replace Objective-C;
 Swift is a compillable (fast), easy-learning and secure language;
