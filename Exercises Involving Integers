@@ -1,0 +1,118 @@
+// https://www.ime.usp.br/~macmulti/exercicios/
+
+//Exercices involving Integers
+
+1.Given a sequence of nonzero integers, print their squares 
+
+var someIntegers :[Int] = [1,2,3,4,5,6,7] 
+
+
+func squares (x:[Int]) -> [Int]{ // function that receives an array of ints and returns an array of ints
+	var someSquares = [Int]()
+	for i in x {
+		someSquares.append(i*i)
+		
+	}
+	return someSquares
+}
+print("A lista recebida foi:\(someIntegers)") // we can interpolate strings by using \()
+print("O quadrado dessa lista eh:\(squares(x:someIntegers))")
+
+
+
+
+
+
+2.Given an integer number, calculate the sum of the first n positive integer numbers (1...n)
+
+let numero: Int = 10
+var soma: Int = 0
+func sum_n_integers (x : Int) -> Int { // parameters goes between () and instructions goes between {}
+	for i in 1...10 {
+		soma = soma + i
+	}
+	return soma
+}
+
+print("O numero escolhido foi: \(numero)")
+print("A soma dos numeros de 1 a \(numero) é \(sum_n_integers(x:numero))")
+
+3.Given a positive integer number, print the first n natural odd numbers
+
+let numero2: Int = 99
+func n_primeirosImpares (n:Int) -> [Int]{
+	var listaDeImpares:[Int] = []
+	
+	for i in 1...99{
+		if i % 2 != 0 {
+			listaDeImpares.append(i)			
+		}
+	}
+	return listaDeImpares
+}
+print("Os numeros impares entre 1 e \(numero2) sao: \(n_primeirosImpares(n:numero2))")
+
+
+
+4. given an integer number x and an positive integer number calculate x**n
+ 
+let x: Int = 3
+let y: Int = 3
+var potencia: Int = 1
+if y<0{
+	print("nao é possivel realizar operacao")
+}else{
+	for _ in 1...y{
+		potencia = potencia * x
+	}
+	print("\(x) ** \(y) = \(potencia) ")
+}
+
+
+
+5. A record store records the number of discs sold during the month of March (31 days). 
+   Determine on what day of the month the biggest sale occurred and how many discs were sold that day. 
+
+let dias_venda: [Int] = [10,11,2,4,3,5,7,7,5,44,33,2,2,4,5,6,7,8,9,67,5,4,3,2,2,2,23,4,5,6,7,8,6,5,4,3,2,4,5,7,87]
+
+for (index, value) in dias_venda.enumerated(){
+	if value == dias_venda.max(){
+		print("dia \(index+1) ocorreu a maior venda no valor: \(value) ")
+	}
+}
+
+6. given a sequence of grades, determine the higher and the lower grade on the sequence
+
+let notas: [Int] = [11,22,33,44,55,6,66,77,88,99,100]
+print("a maior nota foi \(notas.max()!) e a menor nota foi \(notas.min()!) ")
+
+
+7. Given a sequence of n integers, calculate the sum of even number in the sequence
+
+var soma: Int = 0
+for i in 1...100{
+	if i % 2 == 0{
+	soma += i
+	}
+}
+print(soma)
+
+
+
+8. Calculate the factorial of a number x!
+
+func fatorial(_ x: Int) -> Int { // it appears to me that  (_ x:Int) means we can call the function without (x:10) just with (10) 
+	
+	if x == 1{
+		return 1
+	}else{
+		return x * fatorial(x-1)
+	}
+}
+print(fatorial(10))
+
+
+
+//My progress:
+//Days Studying Swift = 3
+//Exercises done = 7
